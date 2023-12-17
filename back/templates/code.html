@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        "Популярные чемпионы во вселеленной League of Legends"
+    </h1>
+    <table border="1">
+        <tr>
+            <th>Название персонажа</th>
+            <th>Линия игры</th>
+            <th>Популярность</th>
+            <th>Винрейт</th>
+            <th>Блокировки</th>
+            <th>KDA</th>
+            <th>Пентакиллы/игра</th>
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
