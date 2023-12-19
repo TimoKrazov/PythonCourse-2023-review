@@ -1,8 +1,5 @@
 import sqlite3
 
-def add_stats(cur, names, line, popular, wins, bans, kdas, pentakills):
-    cur.execute('''INSERT INTO league_of_legends(person, line, popularity_percent, winrate_percent, banrate_percent, kda, pentas_match)
-                VALUES (?, ?, ?, ?, ?, ?, ?)''',(names, line, popular, wins, bans, kdas, pentakills))
 #Создание БД
 def create_table(cur, conn):
     cur.execute('DROP TABLE IF EXISTS league_of_legends')
